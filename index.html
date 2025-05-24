@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="ribbon">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="RAG Logo" class="logo">
+        </div>
+        <h1 class="product-name">RAG Application</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="tagline">Chat with your documents using advanced AI technology</h2>
+            </div>
+            <div class="hero-image">
+                <img src="images/product_screen.png" alt="Product Screenshot" class="product-screenshot">
+            </div>
+        </section>
+    </main>
+
+    <section class="black-section">
+        <div class="black-section-content">
+            <h2 class="features-heading">Top Features</h2>
+            <div class="feature-card">
+                <div class="grid-section">
+                    <div class="grid-content">
+                        <h3>Supports Multiple Document Types</h3>
+                        <ul class="description-list">
+                            <li>Supports text and pdf document upload from local storage.</li>
+                            <li>Total size of documents should be less than 5MB.</li>
+                            <li>Individual document size must be less than 1MB.</li>
+                        </ul>
+                    </div>
+                    <div class="grid-image">
+                        <img src="images/supported_types.png" alt="Supported Document Types" class="document-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="grid-section">
+                    <div class="grid-content">
+                        <h3>Supports Multiple Document Splitters</h3>
+                        <ul class="description-list">
+                            <li>Supports 5 splitters to chunk the documents.</li>
+                            <li>Supports custom splitters like Regex Splitter, PDF Font Splitter and Dummy Splitter.</li>
+                            <li>Multiple splitters can be applied to a document using the indexing pipeline.</li>
+                        </ul>
+                    </div>
+                    <div class="grid-image">
+                        <img src="images/splitters.png" alt="Multiple Splitters Support" class="document-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="grid-section">
+                    <div class="grid-content">
+                        <h3>Supports Vector Store Index</h3>
+                        <ul class="description-list">
+                            <li>Supports multiple sentence embedding models.</li>
+                            <li>Supports vector stores like ChromaDB and Pinecone.</li>
+                        </ul>
+                    </div>
+                    <div class="grid-image">
+                        <img src="images/vector_index.png" alt="Vector Store Index Support" class="document-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="grid-section">
+                    <div class="grid-content">
+                        <h3>Enables Document Content Viewer</h3>
+                        <ul class="description-list">
+                            <li>Enables a user to view the raw file content as well as the fonts in a PDF file.</li>
+                            <li>This enables the user to decide the chinking strategy to use.</li>
+                            <li>Aids in smart chunking strategy as per the document structure.</li>
+                        </ul>
+                    </div>
+                    <div class="grid-image">
+                        <img src="images/file_viewer.png" alt="Document Content Viewer" class="file-viewer-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="grid-section">
+                    <div class="grid-content">
+                        <h3>Enables Document Chunk Viewer</h3>
+                        <ul class="description-list">
+                            <li>Enables users to view the chunks before building an indexing pipeline.</li>
+                            <li>Enables users to compare multiple splitters and choose the best one for their documents.</li>
+                            <li>Enables users to apply multiple splitters to a document.</li>
+                        </ul>
+                    </div>
+                    <div class="grid-image">
+                        <img src="images/chunk_viewer.png" alt="Document Chunk Viewer" class="document-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
