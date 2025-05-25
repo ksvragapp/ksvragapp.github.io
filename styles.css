@@ -781,7 +781,7 @@ html {
     .feature-card {
         padding: 1.25rem;
     }
-
+}
 
     .description-list li {
         font-size: 0.9rem;
@@ -1418,5 +1418,48 @@ body {
     
     .product-name {
         font-size: 1.2rem;
+    }
+}
+
+/* Technologies Section */
+.technologies-section {
+    padding: 3rem 1.5rem;
+    background-color: var(--background-dark);
+    text-align: center;
+}
+
+.technologies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.technologies-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.tech-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tech-logo:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .technologies-grid {
+        gap: 1.5rem;
+    }
+    
+    .tech-logo {
+        width: 60px;
+        height: 60px;
     }
 }
