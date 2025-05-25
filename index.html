@@ -28,99 +28,137 @@
         <div class="black-section-content">
             <h2 class="features-heading">All Features</h2>
             <div class="features-grid">
+                <!-- Document Types Card -->
                 <div class="feature-card">
-                <div class="grid-section">
-                    <div class="grid-content">
-                        <h3>Supports Multiple Document Types</h3>
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h3>Supports Multiple Document Types</h3>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/supported_types.png" alt="Supported Document Types" class="document-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
                         <ul class="description-list">
                             <li>Supports text and pdf document types.</li>
-                            <li>Users an upload the documents from their local storage.</li>
+                            <li>Users can upload the documents from their local storage.</li>
                             <li>Total size of documents should be less than 5MB.</li>
                             <li>Individual document size must be less than 1MB.</li>
                         </ul>
                     </div>
-                    <div class="grid-image">
-                        <img src="images/supported_types.png" alt="Supported Document Types" class="document-image">
-                    </div>
                 </div>
-            </div>
 
-            <div class="feature-card">
-                <div class="grid-section">
-                    <div class="grid-content">
-                        <h3>Supports Multiple Document Splitters</h3>
-                        <ul class="description-list">
-                            <li>Supports 5 splitters to chunk the documents.</li>
-                            <li>Supports custom splitters like Regex Splitter, PDF Font Splitter and Dummy Splitter.</li>
-                            <li>Multiple splitters can be applied to a document using the indexing pipeline.</li>
-                        </ul>
+                <!-- Document Viewer Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h3>Provides Document Content Viewer</h3>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/file_viewer.png" alt="Document Content Viewer" class="file-viewer-image">
+                        </div>
                     </div>
-                    <div class="grid-image">
-                        <img src="images/splitters.png" alt="Multiple Splitters Support" class="document-image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="feature-card">
-                <div class="grid-section">
-                    <div class="grid-content">
-                        <h3>Supports Vector Store Index</h3>
-                        <ul class="description-list">
-                            <li>Supports multiple sentence embedding models like Mixedbread AI's mxbai-embed-large-v1 and all-mpnet-base-v2.</li>
-                            <li>Enables a user to configure the embedding batch size.</li>
-                            <li>Supports vector stores like ChromaDB and Pinecone.</li>
-                        </ul>
-                    </div>
-                    <div class="grid-image">
-                        <img src="images/vector_index.png" alt="Vector Store Index Support" class="document-image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="feature-card">
-                <div class="grid-section">
-                    <div class="grid-content">
-                        <h3>Enables Content Viewer</h3>
+                    <div class="feature-description">
                         <ul class="description-list">
                             <li>Enables a user to view the raw file content as well as the fonts in a PDF file.</li>
                             <li>This enables the user to decide the chinking strategy to use.</li>
                             <li>Aids in smart chunking strategy as per the document structure.</li>
                         </ul>
                     </div>
-                    <div class="grid-image">
-                        <img src="images/file_viewer.png" alt="Document Content Viewer" class="file-viewer-image">
+                </div>
+
+                <!-- Document Splitters Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h3>Supports Multiple Document Splitters</h3>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/splitters.png" alt="Multiple Splitters Support" class="document-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>Supports 5 splitters to chunk the documents.</li>
+                            <li>Supports custom splitters like Regex Splitter, PDF Font Splitter and Dummy Splitter.</li>
+                            <li>Multiple splitters can be applied to a document using the indexing pipeline.</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <div class="feature-card">
-                <div class="grid-section">
-                    <div class="grid-content">
-                        <h3>Enables Chunk Viewer</h3>
+                <!-- Vector Store Index Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h3>Supports Vector Store Index</h3>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/vector_index.png" alt="Vector Store Index Support" class="document-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>Supports multiple sentence embedding models like Mixedbread AI's mxbai-embed-large-v1 and all-mpnet-base-v2.</li>
+                            <li>Enables a user to configure the embedding batch size.</li>
+                            <li>Supports vector stores like ChromaDB and Pinecone.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Chunk Viewer Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h3>Provides Document Chunk Viewer</h3>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/chunk_viewer.png" alt="Document Chunk Viewer" class="document-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
                         <ul class="description-list">
                             <li>Enables users to view the chunks before building an indexing pipeline.</li>
                             <li>Enables users to compare multiple splitters and choose the best one for their documents.</li>
                             <li>Enables users to apply multiple splitters to a document.</li>
                         </ul>
                     </div>
-                    <div class="grid-image">
-                        <img src="images/chunk_viewer.png" alt="Document Chunk Viewer" class="document-image">
-                    </div>
                 </div>
-            </div>
 
-            <div class="feature-card">
-                <div class="grid-section">
-                    <div class="grid-content">
-                        <h3>Interactive QA Bot</h3>
+                <!-- Interactive QA Bot Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h3>Provides Interactive QA Bot</h3>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/chatbot.png" alt="Interactive QA Bot" class="chatbot-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
                         <ul class="description-list">
                             <li>Chat with your documents by asking questions in the chatbot.</li>
                             <li>The retrieved context will be shown on the left for the user to verify the correctness of the bot's response.</li>
-                            <li>Each indexing pipeline will have its own chatbot to chat only with  the documents indexed in that pipeline.</li>
+                            <li>Each indexing pipeline will have its own chatbot to chat only with the documents indexed in that pipeline.</li>
                         </ul>
                     </div>
-                    <div class="grid-image">
-                        <img src="images/chatbot.png" alt="Interactive QA Bot" class="chatbot-image">
+                </div>
+
+                <!-- Customize Chat Settings Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h3>Customize Chat Settings</h3>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/chat_settings.png" alt="Customize Chat Settings" class="document-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>User can configure chat settings for each indexing pipeline independently.</li>
+                            <li>User can configure LLM, temperature, retriever settings, hybrid search settings and re-ranking settings.</li>
+                            <li>User can restore the default chat settings provided by the application anytime.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
