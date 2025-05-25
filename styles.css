@@ -170,7 +170,7 @@ html {
 /* Header styling */
 .ribbon {
     background: var(--primary-color);
-    padding: 0.75rem 1.5rem;
+    padding: 1.75rem 1.5rem;  /* Increased top/bottom padding from 1.25rem to 1.75rem */
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 4px var(--shadow-color);
