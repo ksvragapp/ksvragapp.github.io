@@ -26,13 +26,15 @@
 
     <section class="black-section">
         <div class="black-section-content">
-            <h2 class="features-heading">Top Features</h2>
-            <div class="feature-card">
+            <h2 class="features-heading">All Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
                 <div class="grid-section">
                     <div class="grid-content">
                         <h3>Supports Multiple Document Types</h3>
                         <ul class="description-list">
-                            <li>Supports text and pdf document upload from local storage.</li>
+                            <li>Supports text and pdf document types.</li>
+                            <li>Users an upload the documents from their local storage.</li>
                             <li>Total size of documents should be less than 5MB.</li>
                             <li>Individual document size must be less than 1MB.</li>
                         </ul>
@@ -64,7 +66,8 @@
                     <div class="grid-content">
                         <h3>Supports Vector Store Index</h3>
                         <ul class="description-list">
-                            <li>Supports multiple sentence embedding models.</li>
+                            <li>Supports multiple sentence embedding models like Mixedbread AI's mxbai-embed-large-v1 and all-mpnet-base-v2.</li>
+                            <li>Enables a user to configure the embedding batch size.</li>
                             <li>Supports vector stores like ChromaDB and Pinecone.</li>
                         </ul>
                     </div>
@@ -77,7 +80,7 @@
             <div class="feature-card">
                 <div class="grid-section">
                     <div class="grid-content">
-                        <h3>Enables Document Content Viewer</h3>
+                        <h3>Enables Content Viewer</h3>
                         <ul class="description-list">
                             <li>Enables a user to view the raw file content as well as the fonts in a PDF file.</li>
                             <li>This enables the user to decide the chinking strategy to use.</li>
@@ -93,7 +96,7 @@
             <div class="feature-card">
                 <div class="grid-section">
                     <div class="grid-content">
-                        <h3>Enables Document Chunk Viewer</h3>
+                        <h3>Enables Chunk Viewer</h3>
                         <ul class="description-list">
                             <li>Enables users to view the chunks before building an indexing pipeline.</li>
                             <li>Enables users to compare multiple splitters and choose the best one for their documents.</li>
@@ -104,6 +107,23 @@
                         <img src="images/chunk_viewer.png" alt="Document Chunk Viewer" class="document-image">
                     </div>
                 </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="grid-section">
+                    <div class="grid-content">
+                        <h3>Interactive QA Bot</h3>
+                        <ul class="description-list">
+                            <li>Chat with your documents by asking questions in the chatbot.</li>
+                            <li>The retrieved context will be shown on the left for the user to verify the correctness of the bot's response.</li>
+                            <li>Each indexing pipeline will have its own chatbot to chat only with  the documents indexed in that pipeline.</li>
+                        </ul>
+                    </div>
+                    <div class="grid-image">
+                        <img src="images/chatbot.png" alt="Interactive QA Bot" class="chatbot-image">
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
