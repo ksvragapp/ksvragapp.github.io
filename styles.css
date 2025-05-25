@@ -31,9 +31,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: -0.01em;
+    overflow-x: hidden;
+    width: 100%;
 }
 
-/* Typography Scale */
+/* Typography Scale with responsive adjustments */
 :root {
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
@@ -44,8 +46,46 @@ body {
     --font-size-3xl: 1.875rem;
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
-    --font-size-6xl: 4rem;
-    --font-size-7xl: 5rem;
+    --font-size-6xl: 3.5rem;
+    --font-size-7xl: 4rem;
+    
+    /* Responsive base font size */
+    font-size: 100%;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 1600px) {
+    :root {
+        --font-size-6xl: 3.25rem;
+        --font-size-5xl: 2.75rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --font-size-6xl: 3rem;
+        --font-size-5xl: 2.5rem;
+        --font-size-4xl: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --font-size-6xl: 2.5rem;
+        --font-size-5xl: 2.25rem;
+        --font-size-4xl: 1.875rem;
+        --font-size-3xl: 1.625rem;
+        --font-size-2xl: 1.375rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --font-size-6xl: 2rem;
+        --font-size-5xl: 1.875rem;
+        --font-size-4xl: 1.625rem;
+        --font-size-base: 0.9375rem;
+    }
 }
 
 /* Heading styles */
@@ -124,13 +164,56 @@ p, span, h1, h2, h3, h4, h5, h6 {
 /* Header styling */
 .ribbon {
     background: var(--primary-color);
-    padding: 2rem 2rem 2rem 4rem;
+    padding: 0.75rem 1.5rem;
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 4px var(--shadow-color);
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-name {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .ribbon {
+        padding: 1rem 2rem;
+    }
+    
+    .product-name {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ribbon {
+        padding: 1rem 3rem;
+    }
+    
+    .product-name {
+        font-size: 2.2rem;
+    }
 }
 
 .logo-container {
@@ -242,12 +325,31 @@ p, span, h1, h2, h3, h4, h5, h6 {
 /* Features section */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.25rem;
-    margin-top: 1rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Feature Card */
+@media (min-width: 600px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+
 .feature-card {
     background: var(--background-light);
     border-radius: 8px;
@@ -258,15 +360,31 @@ p, span, h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+
+@media (min-width: 600px) {
+    .feature-card {
+        min-height: 240px;
+    }
 }
 
 /* Feature Header - 2 column layout */
 .feature-header {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr auto;
     gap: 0.75rem;
-    align-items: start;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+@media (min-width: 480px) {
+    .feature-header {
+        grid-template-columns: 3fr 1fr;
+    }
 }
 
 /* Header Content */
@@ -494,27 +612,46 @@ p, span, h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media (max-width: 1024px) {
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         padding: 2rem 1rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-
-    .product-name {
-        font-size: 2rem;
-        margin-top: 0.5rem;
+    
+    .hero-image {
+        max-width: 80%;
+        margin: 0 auto;
     }
-
-    .tagline {
-        font-size: 2rem;
+    
+    .hero-content {
+        text-align: center;
     }
-
+    
     .features-heading {
-        font-size: 2rem;
+        font-size: var(--font-size-4xl);
+        padding: 0 1rem;
     }
-
+    
+    .product-name {
+        font-size: 1.75rem;
+        margin: 0;
+    }
+    
+    .tagline {
+        font-size: 1.75rem;
+    }
+    
     .feature-card {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
+}
 
     .description-list li {
         font-size: 0.9rem;
