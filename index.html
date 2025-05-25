@@ -11,17 +11,22 @@
 </head>
 <body>
     <header class="ribbon">
-        <div class="logo-wrapper">
+        <div class="ribbon-content">
+            <nav class="ribbon-nav">
+                <a href="#features" class="ribbon-link">Product Features</a>
+            </nav>
             <div class="logo-container">
                 <img src="images/logo.png" alt="RAG Logo" class="logo">
+                <h1 class="product-name">RAG Application</h1>
             </div>
-            <h1 class="product-name">RAG Application</h1>
+            <div class="ribbon-spacer"></div> <!-- Empty div to push logo to center -->
         </div>
     </header>
     <main>
         <section class="hero">
             <div class="hero-content">
                 <h2 class="tagline">Chat with your documents using advanced AI technology</h2>
+                <p class="tagline-subtext">A no-code platform to build RAG pipelines and chat with your documents.</p>
             </div>
             <div class="hero-image">
                 <img src="images/product_screen.png" alt="Product Screenshot" class="product-screenshot">
@@ -29,10 +34,10 @@
         </section>
     </main>
 
-    <section class="black-section">
+    <section id="features" class="black-section">
         <div class="black-section-content">
-            <h2 class="features-heading">All Features</h2>
-            <div class="features-grid">
+            <h2 class="features-heading">Product Features</h2>
+            <div class="features-grid" id="featuresGrid">
                 <!-- Document Types Card -->
                 <div class="feature-card">
                     <div class="feature-header">
@@ -166,6 +171,9 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="view-more-container">
+                <button id="viewMoreBtn" class="view-more-btn"></button>
             </div>
             </div>
         </div>

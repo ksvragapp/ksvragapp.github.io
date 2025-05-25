@@ -93,6 +93,32 @@ images.forEach(img => {
     });
 });
 
+// View More/Less functionality for features grid
+document.addEventListener('DOMContentLoaded', () => {
+    const viewMoreBtn = document.getElementById('viewMoreBtn');
+    const featuresGrid = document.getElementById('featuresGrid');
+
+    if (viewMoreBtn && featuresGrid) {
+        // Initialize button text
+        updateButtonText();
+        
+        viewMoreBtn.addEventListener('click', (e) => {
+            featuresGrid.classList.toggle('expanded');
+            updateButtonText();
+            
+            // Smooth scroll to the button's position when expanding
+            if (featuresGrid.classList.contains('expanded')) {
+                viewMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+        
+        function updateButtonText() {
+            const isExpanded = featuresGrid.classList.contains('expanded');
+            viewMoreBtn.textContent = isExpanded ? 'View Less Features' : 'View More Features';
+        }
+    }
+});
+
 // 1. Dynamic content loading
 // 2. Interactive demos
 // 3. Feature toggles
