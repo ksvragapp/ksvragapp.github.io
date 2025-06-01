@@ -444,8 +444,8 @@ html {
     animation: fadeIn 0.3s ease-out forwards;
 }
 
-/* Hide features beyond the first two rows by default (6 cards) */
-.features-grid:not(.expanded) .feature-card:nth-child(n+7) {
+/* Hide features beyond the first nine cards by default */
+.features-grid:not(.expanded) .feature-card:nth-child(n+10) {
     display: none;
 }
 
@@ -461,8 +461,8 @@ html {
         gap: 1.5rem;
     }
     
-    /* Show first 6 items (3 rows) on tablet */
-    .features-grid:not(.expanded) .feature-card:nth-child(n+7) {
+    /* Show first 9 items on tablet */
+    .features-grid:not(.expanded) .feature-card:nth-child(n+10) {
         display: none;
     }
 }
@@ -475,7 +475,7 @@ html {
     }
     
     /* Show first 6 items (2 rows) on desktop */
-    .features-grid:not(.expanded) .feature-card:nth-child(n+7) {
+    .features-grid:not(.expanded) .feature-card:nth-child(n+10) {
         display: none;
     }
 }

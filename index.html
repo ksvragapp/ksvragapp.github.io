@@ -41,11 +41,155 @@
         <div class="black-section-content">
             <h2 class="features-heading">Product Features</h2>
             <div class="features-grid" id="featuresGrid">
-                <!-- Document Types Card -->
+                <!-- Interactive QA Bot Card -->
                 <div class="feature-card">
                     <div class="feature-header">
                         <div class="header-content">
-                            <h4 style="color: white;">Supports Multiple Document Types</h4>
+                            <h4 style="color: white;">Provides Interactive QA Bot</h4>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/chatbot.png" alt="Interactive QA Bot" class="chatbot-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>Chat with your documents by asking questions in the chatbot.</li>
+                            <li>The retrieved context will be shown on the left for the user to verify the correctness of the bot's response.</li>
+                            <li>Each indexing pipeline will have its own chatbot.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Query Enrichment Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Supports Query Enrichment</h4>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/query_enrichment.png" alt="Query Enrichment" class="chatbot-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>Enables users to enrich the query for better retrieval and LLM responses.</li>
+                            <li>Supports subquery generation to fetch answers for multiple queries in a single request.</li>
+                            <li>Supports query cleaning and query rewriting for better retrieval and LLM response.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Metrics Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Provides Evaluation Metrics</h4>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/metrics.png" alt="Evaluation Metrics" class="chatbot-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>Enables users to evaluate the performance of the retriever and LLM responses.</li>
+                            <li>Context relevance score helps in evaluating the retriever's performance.</li>
+                            <li>Response hallucination score helps in evaluation the LLM response quality.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Query suggestions Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Provides Query Suggestions</h4>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/query_suggestions.png" alt="Query Suggestions" class="chatbot-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>Provides query suggestions to the user if a user includes HyPE in the indexing pipeline.</li>
+                            <li>Enables user to view the query suggestions for each document separately.</li>
+                            <li>Helps a user in getting an overview of the questions a document can answer.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- context enrichment Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Enables Context Enrichment</h4>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/hype.png" alt="Context Enrichment" class="chatbot-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>Enables a user to enhance the context using HyPE technique.</li>
+                            <li>User can select the number of hypothetical queries to generate.</li>
+                            <li>Improves retrieval quality by comparing user's query with hypothetical queries for similarity.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Customize Chat Settings Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Customizable QA Chat Bot Settings</h4>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/chat_settings.png" alt="Customize Chat Settings" class="document-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>User can configure chat settings for each indexing pipeline independently.</li>
+                            <li>User can configure LLM, temperature, retriever settings, hybrid search settings and re-ranking settings.</li>
+                            <li>User can restore the default chat settings provided by the application anytime.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Customize Model Prompt Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Customizable QA Chat Bot Prompt</h4>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/prompt_template.png" alt="Customize Model Prompt" class="document-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>User can configure prompt template according to their documents and requirements.</li>
+                            <li>Users can configure the prompt template for each indexing pipeline independently.</li>
+                            <li>User can restore the default prompt template provided by the application anytime.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Document Splitters Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Provides Multiple Splitters</h4>
+                        </div>
+                        <div class="header-image">
+                            <img src="images/splitters.png" alt="Multiple Splitters Support" class="document-image">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>Provides 5 splitters to chunk the documents.</li>
+                            <li>Supports custom splitters like Regex Splitter, PDF Font Splitter and Dummy Splitter.</li>
+                            <li>User can apply different splitter for different documents based on the document structure which ensures smart chunking.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Supports Text and PDF Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Supports Text and PDF Documents</h4>
                         </div>
                         <div class="header-image">
                             <img src="images/supported_types.png" alt="Supported Document Types" class="document-image">
@@ -65,7 +209,7 @@
                 <div class="feature-card">
                     <div class="feature-header">
                         <div class="header-content">
-                            <h4 style="color: white;">Provides Document Content Viewer</h4>
+                            <h4 style="color: white;">Provides Document Viewer</h4>
                         </div>
                         <div class="header-image">
                             <img src="images/file_viewer.png" alt="Document Content Viewer" class="file-viewer-image">
@@ -80,24 +224,7 @@
                     </div>
                 </div>
 
-                <!-- Document Splitters Card -->
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="header-content">
-                            <h4 style="color: white;">Supports Multiple Document Splitters</h4>
-                        </div>
-                        <div class="header-image">
-                            <img src="images/splitters.png" alt="Multiple Splitters Support" class="document-image">
-                        </div>
-                    </div>
-                    <div class="feature-description">
-                        <ul class="description-list">
-                            <li>Supports 5 splitters to chunk the documents.</li>
-                            <li>Supports custom splitters like Regex Splitter, PDF Font Splitter and Dummy Splitter.</li>
-                            <li>Multiple splitters can be applied to a document using the indexing pipeline.</li>
-                        </ul>
-                    </div>
-                </div>
+                
 
                 <!-- Vector Store Index Card -->
                 <div class="feature-card">
@@ -137,63 +264,11 @@
                     </div>
                 </div>
 
-                <!-- Interactive QA Bot Card -->
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="header-content">
-                            <h4 style="color: white;">Provides Interactive QA Bot</h4>
-                        </div>
-                        <div class="header-image">
-                            <img src="images/chatbot.png" alt="Interactive QA Bot" class="chatbot-image">
-                        </div>
-                    </div>
-                    <div class="feature-description">
-                        <ul class="description-list">
-                            <li>Chat with your documents by asking questions in the chatbot.</li>
-                            <li>The retrieved context will be shown on the left for the user to verify the correctness of the bot's response.</li>
-                            <li>Each indexing pipeline will have its own chatbot.</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Customize Chat Settings Card -->
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="header-content">
-                            <h4 style="color: white;">Customize Chat Settings</h4>
-                        </div>
-                        <div class="header-image">
-                            <img src="images/chat_settings.png" alt="Customize Chat Settings" class="document-image">
-                        </div>
-                    </div>
-                    <div class="feature-description">
-                        <ul class="description-list">
-                            <li>User can configure chat settings for each indexing pipeline independently.</li>
-                            <li>User can configure LLM, temperature, retriever settings, hybrid search settings and re-ranking settings.</li>
-                            <li>User can restore the default chat settings provided by the application anytime.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Customize Model Prompt Card -->
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="header-content">
-                            <h4 style="color: white;">Customize Model Prompt</h4>
-                        </div>
-                        <div class="header-image">
-                            <img src="images/prompt_template.png" alt="Customize Model Prompt" class="document-image">
-                        </div>
-                    </div>
-                    <div class="feature-description">
-                        <ul class="description-list">
-                            <li>User can configure prompt template according to their documents and requirements.</li>
-                            <li>Users can configure the prompt template for each indexing pipeline independently.</li>
-                            <li>User can restore the default prompt template provided by the application anytime.</li>
-                        </ul>
-                    </div>
-                </div>
+                
+                
                 <!-- Pipeline configuration Card -->
-                <div class="feature-card">
+                <!-- <div class="feature-card">
                     <div class="feature-header">
                         <div class="header-content">
                             <h4 style="color: white;">View Pipeline Configuration</h4>
@@ -209,7 +284,7 @@
                             <li>Viewing the files ingested improves the chat experience for the user enabling him to ask relevant questions.</li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="view-more-container">
                 <button id="viewMoreBtn" class="view-more-btn"></button>
