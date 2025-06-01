@@ -1030,6 +1030,10 @@ main {
     justify-content: center;
 }
 
+.product-screenshot {
+    cursor: pointer;
+}
+
 .document-image {
     max-width: 80%;
     max-height: 200px;

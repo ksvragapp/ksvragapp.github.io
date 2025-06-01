@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
 // Add any additional interactive features here
 
 // Image preview functionality
-const images = document.querySelectorAll('.document-image, .chatbot-image, .file-viewer-image');
+const images = document.querySelectorAll('.document-image, .chatbot-image, .file-viewer-image, .product-screenshot');
 const preview = document.createElement('div');
 preview.className = 'full-size-preview';
 document.body.appendChild(preview);
@@ -25,16 +25,17 @@ images.forEach(img => {
     });
 });
 
-preview.addEventListener('click', (e) => {
-    if (e.target === preview || e.target.className === 'full-size-preview') {
-        preview.style.display = 'none';
-    }
-});
+function closePreview() {
+    preview.style.display = 'none';
+    manageScrollState(false);
+}
+
+preview.addEventListener('click', closePreview);
 
 // Close preview when pressing escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        preview.style.display = 'none';
+        closePreview();
     }
 });
 
