@@ -252,7 +252,7 @@ html {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 0rem;
     align-items: center;
 }
 
@@ -270,7 +270,7 @@ html {
 @media (min-width: 992px) {
     .hero {
         grid-template-columns: 1fr 1fr;
-        gap: 3rem;
+        gap: 0rem;
         padding: 4rem 2rem;
     }
     
@@ -752,7 +752,7 @@ html {
     .hero {
         padding: 2rem 1rem;
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 0rem;
     }
     
     .hero-image {
@@ -1299,7 +1299,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5rem;
+    gap: 0rem;
     margin-bottom: 2rem;
     padding: 2rem 0 2rem;
 }
@@ -1360,7 +1360,7 @@ body {
 .hero-image {
     flex: 1;
     max-width: 65%;
-    padding-left: 3rem;
+    padding-left: 0rem;
 }
 
 .product-screenshot {
@@ -1376,7 +1376,7 @@ body {
 /* Responsive design */
 @media (max-width: 1200px) {
     .hero {
-        gap: 4rem;
+        gap: 0rem;
     }
     
     .hero-content {
@@ -1390,7 +1390,7 @@ body {
 
 @media (max-width: 992px) {
     .hero {
-        gap: 3rem;
+        gap: 0rem;
         padding: 3rem 0;
     }
     
@@ -1416,7 +1416,7 @@ body {
     
     .hero-content, .hero-image {
         max-width: 100%;
-        padding: 1rem;
+        padding: 0rem;
     }
     
     .product-name {
