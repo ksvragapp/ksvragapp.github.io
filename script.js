@@ -11,86 +11,64 @@ window.addEventListener('scroll', () => {
 // Add any additional interactive features here
 
 // Image preview functionality
-const images = document.querySelectorAll('.document-image, .chatbot-image, .file-viewer-image, .product-screenshot');
-const preview = document.createElement('div');
-preview.className = 'full-size-preview';
-document.body.appendChild(preview);
+document.addEventListener('DOMContentLoaded', function() {
+    // Create preview container if it doesn't exist
+    if (!document.querySelector('.full-size-preview')) {
+        const previewContainer = document.createElement('div');
+        previewContainer.className = 'full-size-preview';
+        document.body.appendChild(previewContainer);
+    }
 
-images.forEach(img => {
-    img.addEventListener('click', () => {
-        preview.style.display = 'flex';
-        const imgClone = img.cloneNode();
-        preview.innerHTML = '';
-        preview.appendChild(imgClone);
+    // Function to show preview
+    function showPreview(imageUrl) {
+        const previewContainer = document.querySelector('.full-size-preview');
+        previewContainer.innerHTML = `
+            <img src="${imageUrl}" alt="Preview">
+            <div class="close-preview">×</div>
+        `;
+        previewContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to hide preview
+    function hidePreview() {
+        const previewContainer = document.querySelector('.full-size-preview');
+        previewContainer.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    // Add click event listeners to all header images
+    const headerImages = document.querySelectorAll('.header-image');
+    headerImages.forEach(headerImage => {
+        headerImage.addEventListener('click', function() {
+            const imageUrl = this.getAttribute('data-image');
+            if (imageUrl) {
+                showPreview(imageUrl);
+            }
+        });
     });
-});
 
-function closePreview() {
-    preview.style.display = 'none';
-    manageScrollState(false);
-}
+    // Add click event listeners to all regular images
+    const regularImages = document.querySelectorAll('.document-image, .chatbot-image, .file-viewer-image, .product-screenshot');
+    regularImages.forEach(img => {
+        img.addEventListener('click', function() {
+            const imageUrl = this.src;
+            showPreview(imageUrl);
+        });
+    });
 
-preview.addEventListener('click', closePreview);
+    // Close preview when clicking the close button or background
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('close-preview') || e.target.classList.contains('full-size-preview')) {
+            hidePreview();
+        }
+    });
 
-// Close preview when pressing escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        closePreview();
-    }
-});
-
-// Manage scroll state
-function manageScrollState(show) {
-    const html = document.documentElement;
-    const body = document.body;
-    
-    if (show) {
-        // Save current scroll position
-        const scrollY = window.scrollY;
-        
-        // Prevent scrolling
-        html.style.overflow = 'hidden';
-        body.style.overflow = 'hidden';
-        
-        // Set scroll position
-        html.style.scrollBehavior = 'auto';
-        window.scrollTo(0, scrollY);
-        html.style.scrollBehavior = '';
-    } else {
-        // Restore scrolling
-        html.style.overflow = '';
-        body.style.overflow = '';
-        
-        // Restore scroll position
-        const scrollY = window.scrollY;
-        window.scrollTo(0, scrollY);
-    }
-}
-
-// Close preview when clicking outside or pressing escape
-preview.addEventListener('click', (e) => {
-    if (e.target === preview || e.target.className === 'full-size-preview') {
-        preview.style.display = 'none';
-        manageScrollState(false);
-    }
-});
-
-// Close preview when pressing escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        preview.style.display = 'none';
-        manageScrollState(false);
-    }
-});
-
-// Handle preview display
-images.forEach(img => {
-    img.addEventListener('click', () => {
-        preview.style.display = 'flex';
-        const imgClone = img.cloneNode();
-        preview.innerHTML = '';
-        preview.appendChild(imgClone);
-        manageScrollState(true);
+    // Close preview when pressing escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            hidePreview();
+        }
     });
 });
 
@@ -124,3 +102,43 @@ document.addEventListener('DOMContentLoaded', () => {
 // 2. Interactive demos
 // 3. Feature toggles
 // 4. Theme switching
+
+// Header image preview functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Create preview container if it doesn't exist
+    if (!document.querySelector('.full-size-preview')) {
+        const previewContainer = document.createElement('div');
+        previewContainer.className = 'full-size-preview';
+        document.body.appendChild(previewContainer);
+    }
+
+    // Add click event listeners to all header images
+    const headerImages = document.querySelectorAll('.header-image');
+    headerImages.forEach(headerImage => {
+        headerImage.addEventListener('click', function() {
+            const imageUrl = this.getAttribute('data-image');
+            const previewContainer = document.querySelector('.full-size-preview');
+            
+            // Create and show the preview image
+            previewContainer.innerHTML = `
+                <img src="${imageUrl}" alt="Preview">
+                <div class="close-preview">×</div>
+            `;
+            previewContainer.style.display = 'flex';
+            
+            // Add click event to close button
+            const closeButton = previewContainer.querySelector('.close-preview');
+            closeButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                previewContainer.style.display = 'none';
+            });
+            
+            // Close on background click
+            previewContainer.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+        });
+    });
+});
