@@ -1336,7 +1336,7 @@ body {
 @media (max-width: 768px) {
     .black-section {
         padding: 4rem 0;
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
     
     .black-section-content {
@@ -1463,6 +1463,8 @@ body {
         flex-direction: column;
         text-align: center;
         padding: 2rem 1rem;
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;
     }
     
     .hero-content, .hero-image {
