@@ -272,6 +272,7 @@ html {
         grid-template-columns: 1fr 1fr;
         gap: 0rem;
         padding: 4rem 2rem;
+        margin-left: 3rem;
     }
     
     .hero-image {
