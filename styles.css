@@ -1386,9 +1386,10 @@ body {
 
 @media (max-width: 768px) {
     .tagline {
-        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-size: clamp(1.6rem, 3vw, 2rem);
         text-align: center;
         margin-bottom: 2rem;
+        margin-top: 0.5rem;
         font-weight: 700;
         color: var(--text-primary);
         letter-spacing: -0.02em;
