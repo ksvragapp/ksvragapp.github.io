@@ -1335,7 +1335,7 @@ body {
 /* Responsive adjustments for black section */
 @media (max-width: 768px) {
     .black-section {
-        padding: 4rem 0;
+        padding: 1.5rem 0;
         margin-top: 1rem;
     }
     
