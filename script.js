@@ -76,19 +76,34 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', () => {
     const viewMoreBtn = document.getElementById('viewMoreBtn');
     const featuresGrid = document.getElementById('featuresGrid');
+    let originalScrollPosition = 0;
 
     if (viewMoreBtn && featuresGrid) {
         // Initialize button text
         updateButtonText();
         
         viewMoreBtn.addEventListener('click', (e) => {
+            const isExpanding = !featuresGrid.classList.contains('expanded');
+            
+            if (isExpanding) {
+                // Store current scroll position before expanding
+                originalScrollPosition = window.scrollY;
+                
+                // When expanding, scroll to the hidden content
+                const hiddenContent = featuresGrid.querySelector('.feature-card:nth-child(10)');
+                if (hiddenContent) {
+                    hiddenContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            } else {
+                // When collapsing, restore the original scroll position
+                window.scrollTo({
+                    top: originalScrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+            
             featuresGrid.classList.toggle('expanded');
             updateButtonText();
-            
-            // Smooth scroll to the button's position when expanding
-            if (featuresGrid.classList.contains('expanded')) {
-                viewMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
         });
         
         function updateButtonText() {
