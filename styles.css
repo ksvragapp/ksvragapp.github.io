@@ -403,6 +403,47 @@ html {
     min-width: 200px;
 }
 
+/* Specific styling for Product Features section button */
+.black-section .view-more-btn {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    color: #000000;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    font-size: var(--font-size-lg);
+    min-width: 200px;
+}
+
+.black-section .view-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.black-section .view-more-btn:hover {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-color: #ffffff;
+    color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.black-section .view-more-btn:hover::before {
+    left: 100%;
+}
+
+.black-section .view-more-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+    background: #e9ecef;
+    color: #000000 !important;
+}
+
 .view-more-btn::before {
     content: '';
     position: absolute;
@@ -418,7 +459,7 @@ html {
 .view-more-btn:hover {
     background: #e9ecef;
     border-color: #ced4da;
-    color: #1a1a1a;
+    color: #1a1a1a !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -431,6 +472,7 @@ html {
     transform: translateY(0);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     background: #e2e6ea;
+    color: #1a1a1a !important;
 }
 
 /* Add a subtle animation when toggling */
@@ -1707,8 +1749,23 @@ body {
 }
 
 .how-to-guide-container h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: black;
+    margin: 0 0 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    font-feature-settings: 'tnum';
+    font-variant-numeric: tabular-nums;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     text-align: center;
-    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments for How To Guide heading */
+@media (max-width: 768px) {
+    .how-to-guide-container h2 {
+        font-size: 1.8rem;
+    }
 }
 
 .guide-expanders {
@@ -1858,5 +1915,70 @@ body {
     
     .video-description {
         padding: 0.75rem 1rem;
+    }
+}
+
+/* Hidden expanders for How To Guide */
+.hidden-expander {
+    display: none;
+}
+
+.guide-expanders.expanded .hidden-expander {
+    display: block;
+}
+
+/* View More/Less button for How To Guide */
+.view-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.view-more-btn {
+    background: linear-gradient(135deg, #000000, #333333);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.view-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.view-more-btn:hover {
+    background: linear-gradient(135deg, #1a1a1a, #404040);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    color: white !important;
+}
+
+.view-more-btn:hover::before {
+    left: 100%;
+}
+
+.view-more-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .view-more-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--font-size-base);
     }
 }

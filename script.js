@@ -217,3 +217,44 @@ function toggleExpander(header) {
         }, 300);
     }
 }
+
+// View More/Less functionality for How To Guide expanders
+document.addEventListener('DOMContentLoaded', () => {
+    const viewMoreGuidesBtn = document.getElementById('viewMoreGuidesBtn');
+    const guideExpanders = document.querySelector('.guide-expanders');
+    let originalScrollPosition = 0;
+
+    if (viewMoreGuidesBtn && guideExpanders) {
+        // Initialize button text
+        updateButtonText();
+        
+        viewMoreGuidesBtn.addEventListener('click', (e) => {
+            const isExpanding = !guideExpanders.classList.contains('expanded');
+            
+            if (isExpanding) {
+                // Store current scroll position before expanding
+                originalScrollPosition = window.scrollY;
+                
+                // When expanding, scroll to the first hidden expander
+                const firstHiddenExpander = guideExpanders.querySelector('.hidden-expander');
+                if (firstHiddenExpander) {
+                    firstHiddenExpander.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            } else {
+                // When collapsing, restore the original scroll position
+                window.scrollTo({
+                    top: originalScrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+            
+            guideExpanders.classList.toggle('expanded');
+            updateButtonText();
+        });
+        
+        function updateButtonText() {
+            const isExpanded = guideExpanders.classList.contains('expanded');
+            viewMoreGuidesBtn.textContent = isExpanded ? 'View Less' : 'View More';
+        }
+    }
+});
