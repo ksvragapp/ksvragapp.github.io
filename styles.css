@@ -1571,7 +1571,7 @@ body {
 
 /* Footer Styles */
 .site-footer {
-    background-color: #000000;
+    background-color: white;
     color: white;
     padding: 0.5rem 2rem;
     text-align: center;
@@ -1586,14 +1586,14 @@ body {
 }
 
 .site-footer a {
-    color: white;
+    color: blue;
     text-decoration: underline;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
 .site-footer a:hover {
-    color: var(--accent-color);
+    color: blueviolet;
     text-decoration: none;
 }
 
