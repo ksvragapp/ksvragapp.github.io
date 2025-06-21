@@ -24,6 +24,9 @@
 <meta property="twitter:title" content="MRAG: Product Website" />
 <meta property="twitter:description" content="RAG Product to chat with your documents using GenAI" />
 <meta property="twitter:image" content="/images/product_screen.png" />
+
+<link rel="preload" href="images/chat_settings.gif" as="image">
+
 </head>
 <body>
     <section id="home"></section>
@@ -78,6 +81,23 @@
                             <li>Chat with your documents by asking questions to the chatbot. Voice chat is also supported.</li>
                             <li>The retrieved context will be shown on the left for the user to verify the correctness of the bot's response.</li>
                             <li>Each indexing pipeline will have its own chatbot.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Customize Chat Settings Card -->
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="header-content">
+                            <h4 style="color: white;">Customizable QA Chat Bot Settings</h4>
+                        </div>
+                        <div class="header-image" style="background-image: url('images/chat_settings.gif');" data-image="images/chat_settings.gif">
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul class="description-list">
+                            <li>User can configure chat settings for each indexing pipeline independently.</li>
+                            <li>User can configure LLM, temperature, retriever settings, hybrid search settings and re-ranking settings.</li>
+                            <li>User can restore the default chat settings provided by the application anytime.</li>
                         </ul>
                     </div>
                 </div>
@@ -149,23 +169,7 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Customize Chat Settings Card -->
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="header-content">
-                            <h4 style="color: white;">Customizable QA Chat Bot Settings</h4>
-                        </div>
-                        <div class="header-image" style="background-image: url('images/chat_settings.png');" data-image="images/chat_settings.png">
-                        </div>
-                    </div>
-                    <div class="feature-description">
-                        <ul class="description-list">
-                            <li>User can configure chat settings for each indexing pipeline independently.</li>
-                            <li>User can configure LLM, temperature, retriever settings, hybrid search settings and re-ranking settings.</li>
-                            <li>User can restore the default chat settings provided by the application anytime.</li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <!-- Customize Model Prompt Card -->
                 <div class="feature-card">
                     <div class="feature-header">
