@@ -184,3 +184,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// How To Guide Expander Functionality
+function toggleExpander(header) {
+    const expander = header.parentElement;
+    const content = expander.querySelector('.expander-content');
+    const icon = header.querySelector('.expander-icon');
+    
+    // Toggle active state
+    header.classList.toggle('active');
+    content.classList.toggle('active');
+    
+    // Close other expanders (optional - remove this if you want multiple open)
+    const allExpanders = document.querySelectorAll('.guide-expander');
+    allExpanders.forEach(otherExpander => {
+        if (otherExpander !== expander) {
+            const otherHeader = otherExpander.querySelector('.expander-header');
+            const otherContent = otherExpander.querySelector('.expander-content');
+            otherHeader.classList.remove('active');
+            otherContent.classList.remove('active');
+        }
+    });
+    
+    // Smooth scroll to the expanded content
+    if (content.classList.contains('active')) {
+        setTimeout(() => {
+            expander.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest'
+            });
+        }, 300);
+    }
+}

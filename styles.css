@@ -1483,13 +1483,17 @@ body {
 /* Technologies Section */
 .technologies-section {
     padding: 1.5rem 1.5rem;
-    background-color: var(--background-dark);
+    background-color: #000000;
     text-align: center;
 }
 
 .technologies-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.technologies-container h2 {
+    color: white;
 }
 
 .technologies-grid {
@@ -1686,5 +1690,173 @@ body {
 
     .overlay.active {
         display: block;
+    }
+}
+
+/* How To Guide Section Styles */
+.how-to-guide-section {
+    background: var(--background-light);
+    padding: 1rem 0 2rem 0;
+    min-height: auto;
+}
+
+.how-to-guide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.how-to-guide-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.guide-expanders {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.guide-expander {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.guide-expander:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.expander-header {
+    background: linear-gradient(135deg, #000000, #333333);
+    color: white;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all var(--transition-speed) ease;
+}
+
+.expander-header:hover {
+    background: linear-gradient(135deg, #1a1a1a, #404040);
+}
+
+.expander-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+.expander-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform var(--transition-speed) ease;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expander-header.active .expander-icon {
+    transform: rotate(45deg);
+}
+
+.expander-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed) ease;
+    background: white;
+}
+
+.expander-content.active {
+    max-height: 1000px;
+}
+
+.video-container {
+    padding: 2rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.guide-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+.video-description {
+    padding: 1.5rem 2rem;
+}
+
+.video-description p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design for How To Guide */
+@media (max-width: 768px) {
+    .how-to-guide-section {
+        padding: 2rem 0;
+    }
+    
+    .how-to-guide-container {
+        padding: 0 1rem;
+    }
+    
+    .guide-expanders {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .expander-header {
+        padding: 1rem 1.5rem;
+    }
+    
+    .expander-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .video-container {
+        padding: 1rem;
+    }
+    
+    .video-description {
+        padding: 1rem 1.5rem;
+    }
+    
+    .guide-video {
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .expander-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .expander-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .video-container {
+        padding: 0.75rem;
+    }
+    
+    .video-description {
+        padding: 0.75rem 1rem;
     }
 }
