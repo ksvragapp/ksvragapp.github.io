@@ -179,7 +179,10 @@ document.addEventListener('DOMContentLoaded', function() {
     links.forEach(link => {
         link.addEventListener('click', () => {
             if (nav.classList.contains('active')) {
-                toggleMenu();
+                // Add a small delay to allow smooth scrolling to work properly
+                setTimeout(() => {
+                    toggleMenu();
+                }, 100);
             }
         });
     });
