@@ -1,3 +1,31 @@
+// Loading Overlay Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    
+    // Function to hide loading overlay
+    function hideLoadingOverlay() {
+        if (loadingOverlay) {
+            loadingOverlay.classList.add('hidden');
+            
+            // Remove the overlay from DOM after animation completes
+            setTimeout(() => {
+                if (loadingOverlay.parentNode) {
+                    loadingOverlay.parentNode.removeChild(loadingOverlay);
+                }
+            }, 600);
+        }
+    }
+    
+    // Hide loading overlay when page is fully loaded
+    window.addEventListener('load', function() {
+        // Add a small delay for better UX
+        setTimeout(hideLoadingOverlay, 500);
+    });
+    
+    // Fallback: Hide loading overlay after 5 seconds maximum
+    setTimeout(hideLoadingOverlay, 5000);
+});
+
 // Smooth scrolling for navigation
 window.addEventListener('scroll', () => {
     const ribbon = document.querySelector('.ribbon');
