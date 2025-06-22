@@ -98,8 +98,7 @@
                     <div class="feature-description">
                         <ul class="description-list">
                             <li>User can configure chat settings for each indexing pipeline independently.</li>
-                            <li>User can configure LLM, temperature, retriever settings, hybrid search settings and re-ranking settings.</li>
-                            <li>User can restore the default chat settings provided by the application anytime.</li>
+                            <li>User can configure query settings, LLM, retriever techniques and settings, hybrid search, re-ranker, context compression / denoising and LLM response processing settings.</li>
                         </ul>
                     </div>
                 </div>
@@ -422,6 +421,25 @@
                         </div>
                         <div class="video-description">
                             <p>Explore the available chatbot settings for the chatbot.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Features Guide -->
+                <div class="guide-expander">
+                    <div class="expander-header" onclick="toggleExpander(this)">
+                        <h3 class="expander-title">How to use query suggestions in the chatbot?</h3>
+                        <div class="expander-icon">+</div>
+                    </div>
+                    <div class="expander-content">
+                        <div class="video-container">
+                            <video controls class="guide-video">
+                                <source src="videos/13_suggested_queries.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-description">
+                            <p>Query suggestions are available in the chatbot if a user includes HyPE component in the indexing pipeline. HyPE generates hypothetical queries from the chunks which will be used as suggested queries in the chatbot.</p>
                         </div>
                     </div>
                 </div>
